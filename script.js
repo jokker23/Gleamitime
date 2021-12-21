@@ -11,7 +11,7 @@ window.requestAnimFrame = (function() {
   const hour = document.getElementById("hour"),
     min = document.getElementById("min"),
     sec = document.getElementById("sec"),
-    cincoM = new Audio('Meteor.mp3);
+    cincoM = new Audio('Meteor.mp3');
   (function loop() {
     requestAnimFrame(loop);
     draw();
