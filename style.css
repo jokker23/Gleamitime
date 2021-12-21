@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'IM FELL DW Pica';
+}
+
+body {
+  background: rgb(125, 190, 75);
+  background: linear-gradient(56deg, rgba(125, 190, 75, 1) 0%, rgba(15, 12, 41, 1) 25%, rgba(15, 12, 41, 1) 75%, rgba(125, 190, 75, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  font-family: 'IM FELL DW Pica';
+  font-size: 20px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 1);
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 2em;
+  letter-spacing: 0px;
+}
+
+.hold {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+
+.clock .slice {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip-path: polygon(50% 50%, 20% 100%, 80% 100%);
+}
+
+.clock .clockSlice1 {
+  background-color: #7facf7;
+  transform: rotate(90deg);
+}
+
+.clock .clockSlice2 {
+  background-color: #166dff;
+  transform: rotate(150deg);
+}
+
+.clock .number1 {
+  --rotation: 40deg;
+}
+
+.clock .number2 {
+  --rotation: 80deg;
+}
+
+.clock .number3 {
+  --rotation: 120deg;
+}
+
+.clock .number4 {
+  --rotation: 160deg;
+}
+
+.clock .number5 {
+  --rotation: 200deg;
+}
+
+.clock .number6 {
+  --rotation: 240deg;
+}
+
+.clock .number7 {
+  --rotation: 280deg;
+}
+
+.clock .number8 {
+  --rotation: 320deg;
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 0px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .hand.second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 6px;
+  height: 40%;
+  background-color: black;
+}
+
+.clock .hand.hour {
+  width: 9px;
+  height: 35%;
+  background-color: black;
+}
