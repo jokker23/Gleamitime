@@ -19,7 +19,7 @@ window.requestAnimFrame = (function() {
 
   function draw() {
     var dateNOW = new Date();
-    const dateSTART = new Date("Dec 20, 2021 22:14:06");    
+    const dateSTART = new Date("Dec 20, 2021 22:14:06 MST");    
     dateSTART.setMinutes(dateSTART.getMinutes() - 60);
     var dSeconds = Math.abs(dateNOW - dateSTART) / 1000;
     h = (dSeconds % 5400) / 60;
