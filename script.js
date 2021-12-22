@@ -17,7 +17,7 @@ window.requestAnimFrame = (function() {
   (function loop() {
     var dateNOW = new Date();
     dateSTART.setMinutes(dateSTART.getMinutes() - 60);
-    var dSeconds = (dateNOW - dateSTART) / 1000;
+    var dSeconds = Math.abs(dateNOW - dateSTART) / 1000;
     h = (dSeconds % 5400) / 60;
     m = dSeconds % 90;
     s = (m * 90);
