@@ -26,12 +26,12 @@ window.requestAnimFrame = (function() {
     h = (dSeconds % 5400) / 60;
     m = dSeconds % 90;
     s = (m * 90);
-    console.log(Math.round(h)+":"+Math.round(m)+":"+Math.round(s));
+    //console.log(Math.round(h)+":"+Math.round(m)+":"+Math.round(s));
     hour.style.webkitTransform = "rotate(" + (h * 4) + "deg)";
     min.style.webkitTransform = "rotate(" + (m * 4) + "deg)";
     //sec.style.webkitTransform = "rotate(" + (s*4) + "deg)";
     if (Math.round(m) == 0) {
-      //if (Math.round(s) <= 10) console.log(Math.round(h) + ":" + Math.round(m) + ":" + Math.round(s));
+      if (Math.round(s) <= 10) console.log(Math.round(h) + ":" + Math.round(m) + ":" + Math.round(s));
       if (!howled && Math.round(m) == 55) {
         howled = true;
         cincoM.play();
