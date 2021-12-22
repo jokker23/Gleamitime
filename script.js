@@ -13,11 +13,11 @@ window.requestAnimFrame = (function() {
     sec = document.getElementById("sec"),
     cincoM = new Audio('Meteor.mp3'),
     dateSTART = new Date("Dec 20, 2021 22:14:06 MST");
+    dateSTART.setMinutes(dateSTART.getMinutes() - 60);
   var howled = false;
   (function loop() {
     var dateNOW = new Date();
-    dateSTART.setMinutes(dateSTART.getMinutes() - 60);
-    var dSeconds = Math.abs(dateNOW - dateSTART) / 1000;
+    var dSeconds = (dateNOW - dateSTART) / 1000;
     h = (dSeconds % 5400) / 60;
     m = dSeconds % 90;
     s = (m * 90);
